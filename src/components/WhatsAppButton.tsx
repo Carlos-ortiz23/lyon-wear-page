@@ -18,7 +18,7 @@ export default function WhatsAppButton() {
 
   const handleSupportClick = () => {
     const phoneNumber = '573046412905';
-    const message = encodeURIComponent('Hola Next Level, tengo una duda general sobre sus productos o envíos. ¿Me pueden asesorar?');
+    const message = encodeURIComponent('Hola Lyon Wear, tengo una duda general sobre sus productos o envíos. ¿Me pueden asesorar?');
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank', 'noopener,noreferrer');
   };
 

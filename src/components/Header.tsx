@@ -32,14 +32,14 @@ export default function Header({
           <div className="flex items-center gap-2 select-none">
             <div className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-none bg-black border border-neutral-800 shadow-md p-1 md:p-1.5">
               <img
-                src="/next-level-logo.png"
-                alt="Next Level"
+                src="/lyon-wear-logo.png"
+                alt="Lyon Wear"
                 className="w-full h-full object-contain"
               />
             </div>
             <div className="flex flex-col">
               <span className="text-lg md:text-2xl font-black tracking-tighter uppercase italic text-neutral-950 leading-none">
-                NEXT LEVEL
+                LYON WEAR
               </span>
               <span className="text-[7.5px] md:text-[9px] font-bold tracking-[0.25em] text-neutral-500 uppercase leading-none mt-0.5 md:mt-1">
                 PREMIUM CATALOGUE
@@ -115,13 +115,13 @@ export default function Header({
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 flex items-center justify-center rounded-none bg-black border border-neutral-800 shadow-md p-1">
                   <img
-                    src="/next-level-logo.png"
-                    alt="Next Level"
+                    src="/lyon-wear-logo.png"
+                    alt="Lyon Wear"
                     className="w-full h-full object-contain"
                   />
                 </div>
                 <span className="text-lg font-black tracking-tighter uppercase italic text-neutral-950 leading-none">
-                  NEXT LEVEL
+                  LYON WEAR
                 </span>
               </div>
               <button
@@ -177,7 +177,7 @@ export default function Header({
 
               {/* Decorative Brand watermark inside full screen drawer */}
               <div className="mt-16 text-center select-none opacity-10">
-                <span className="text-4xl font-black italic tracking-widest text-neutral-900">NEXT LEVEL</span>
+                <span className="text-4xl font-black italic tracking-widest text-neutral-900">LYON WEAR</span>
               </div>
             </div>
           </motion.div>

@@ -1,5 +1,5 @@
 /*************************************************
- * NEXT LEVEL API
+ * Lyon Wear API
  * Code.gs
  *************************************************/
 
@@ -12,7 +12,7 @@ function doGet(e){
     }
 
     return HtmlService
-        .createHtmlOutput("Next Level API");
+        .createHtmlOutput("Lyon Wear API");
 
 }
 

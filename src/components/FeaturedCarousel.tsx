@@ -81,7 +81,7 @@ export default function FeaturedCarousel({ products, onProductClick }: FeaturedC
         <div className="absolute bottom-4 left-4 right-4 md:bottom-10 md:left-10 z-20 flex flex-col md:flex-row md:items-end justify-between gap-3 md:gap-4 pointer-events-none">
           <div className="space-y-1.5 md:space-y-4 max-w-xl">
             <span className="inline-block bg-white text-black font-black text-[8px] md:text-[9px] uppercase px-2 py-0.5 md:px-3 md:py-1 rounded-none tracking-[0.2em] leading-none shadow-md">
-              {currentProduct.marca || 'NEXT LEVEL'}
+              {currentProduct.marca || 'LYON WEAR'}
             </span>
             <h3 className="text-xl xs:text-2xl sm:text-5xl md:text-6xl font-black uppercase italic leading-[0.9] text-white tracking-tighter drop-shadow-lg">
               {currentProduct.nombre}

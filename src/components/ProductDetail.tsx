@@ -131,7 +131,7 @@ export default function ProductDetail({
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-black tracking-[0.25em] text-neutral-400 uppercase">
-                    {product.marca || 'NEXT LEVEL'}
+                    {product.marca || 'LYON WEAR'}
                   </span>
                   <div className="flex gap-2">
                     <button
@@ -276,7 +276,7 @@ export default function ProductDetail({
                     <img src={relProduct.imagenes[0]} alt={relProduct.nombre} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer" />
                   </div>
                   <span className="text-[9px] font-black tracking-widest text-neutral-400 uppercase block mb-0.5">
-                    {relProduct.marca || 'NEXT LEVEL'}
+                    {relProduct.marca || 'LYON WEAR'}
                   </span>
                   <h4 className="text-xs font-black uppercase tracking-tight text-neutral-800 truncate">
                     {relProduct.nombre}

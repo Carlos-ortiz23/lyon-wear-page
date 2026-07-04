@@ -105,7 +105,7 @@ export default function ProductCard({ product, onClick }: ProductCardProps) {
         <div>
           {/* Brand - hidden on mobile */}
           <span className="hidden md:block text-[9px] font-black tracking-[0.2em] text-neutral-400 uppercase mb-1">
-            {product.marca || 'NEXT LEVEL'}
+            {product.marca || 'LYON WEAR'}
           </span>
           {/* Product Name */}
           <h3 className="text-xs md:text-sm font-black uppercase tracking-tight text-neutral-900 line-clamp-1">

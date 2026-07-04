@@ -179,7 +179,7 @@ export default function App() {
     });
   }, [products, searchQuery, selectedCategory, selectedGender]);
   return (
-    <div id="next-level-app" className="min-h-screen bg-neutral-50 text-neutral-900 flex flex-col justify-between">
+    <div id="lyon-wear-app" className="min-h-screen bg-neutral-50 text-neutral-900 flex flex-col justify-between">
       
       {/* HEADER SECTION */}
       <Header

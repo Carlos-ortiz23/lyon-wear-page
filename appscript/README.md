@@ -1,4 +1,4 @@
-# Next Level API — Google Apps Script
+# Lyon Wear API — Google Apps Script
 
 Copia versionada del código que corre en script.google.com (vinculado al Google Sheet "Productos").
 Este directorio es la fuente de verdad para cambios: edita aquí, luego pega en el editor de Apps Script.

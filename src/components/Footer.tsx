@@ -22,16 +22,16 @@ export default function Footer() {
           <div className="space-y-4 md:col-span-2">
             <div className="flex items-center gap-2.5">
               <img
-                src="/next-level-logo.png"
-                alt="Next Level"
+                src="/lyon-wear-logo.png"
+                alt="Lyon Wear"
                 className="w-9 h-9 object-contain"
               />
               <span className="text-xl font-black uppercase italic tracking-tighter text-white">
-                NEXT LEVEL
+                LYON WEAR
               </span>
             </div>
             <p className="text-xs text-neutral-400 leading-relaxed font-sans max-w-sm">
-              Next Level es una firma de moda urbana premium enfocada en democratizar diseños exclusivos de alta costura, calzado de alto rendimiento y gorras de colección.
+              Lyon Wear es una firma de moda urbana premium enfocada en democratizar diseños exclusivos de alta costura, calzado de alto rendimiento y gorras de colección.
             </p>
             <div className="flex gap-3 pt-2">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="p-2.5 bg-neutral-900 hover:bg-white border border-neutral-800 rounded-none text-neutral-400 hover:text-black transition-all" aria-label="Síguenos en Instagram">
@@ -74,7 +74,7 @@ export default function Footer() {
         {/* Bottom copyright credits */}
         <div className="pt-6 border-t border-neutral-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] font-sans text-neutral-500 text-center sm:text-left">
           <div>
-            &copy; 2026 NEXT LEVEL. Todos los derechos reservados. Diseñado bajo el Manual de Identidad de Marca Oficial.
+            &copy; 2026 LYON WEAR. Todos los derechos reservados. Diseñado bajo el Manual de Identidad de Marca Oficial.
           </div>
           <button
             onClick={scrollToTop}

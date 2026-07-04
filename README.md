@@ -1,7 +1,7 @@
 <div align="center">
-  <img src="public/next-level-logo.png" alt="Next Level" width="120" />
+  <img src="public/lyon-wear-logo.png" alt="Lyon Wear" width="120" />
 
-  # NEXT LEVEL — Catálogo Premium
+  # LYON WEAR — Catálogo Premium
 
   Catálogo digital de moda urbana premium. Los productos viven en un Google Sheet,
   se sirven mediante Google Apps Script y las compras se coordinan por WhatsApp.

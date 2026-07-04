@@ -32,7 +32,7 @@ export default class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBo
     if (this.state.hasError) {
       return (
         <div className="min-h-screen bg-neutral-50 flex flex-col items-center justify-center px-6 text-center gap-5">
-          <img src="/next-level-logo.png" alt="Next Level" className="w-16 h-16 object-contain" />
+          <img src="/lyon-wear-logo.png" alt="Lyon Wear" className="w-16 h-16 object-contain" />
           <h1 className="text-lg font-black uppercase tracking-widest text-black">
             Algo salió mal
           </h1>
