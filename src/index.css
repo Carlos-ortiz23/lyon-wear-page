@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-black: #000000;
+  --color-brand-white: #FFFFFF;
+  --color-brand-gold: #000000; /* Black for high contrast luxury */
+  --color-brand-gold-soft: #262626;
+  --color-brand-gray: #737373;
+  --color-brand-gray-dark: #F5F5F5; /* Light grey base card */
+  --color-brand-gray-light: #E5E5E5;
+
+  --font-serif: "Inter", "Arial Black", sans-serif;
+  --font-sans: "Inter", "Arial", sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: #F5F5F5;
+    color: #171717;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar to keep it sleek and sporty */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F5F5F5;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D4D4D4;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #171717;
+  }
+}
+
+/* Custom bold classes */
+.gold-gradient {
+  color: #171717;
+}
+
+.gold-border-gradient {
+  border-color: #171717;
+}
+
+.gold-gradient-bg {
+  background: #000000;
+}
+
+.premium-card {
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.premium-card:hover {
+  border-color: #000000;
+  box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.1);
+}
+
+/* Skeletons */
+@keyframes pulse-fast {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+.animate-pulse-fast {
+  animation: pulse-fast 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Hide horizontal scroll indicators */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Premium sleek horizontal scrollbar */
+.premium-scrollbar::-webkit-scrollbar {
+  height: 3px;
+}
+.premium-scrollbar::-webkit-scrollbar-track {
+  background: #F5F5F5;
+}
+.premium-scrollbar::-webkit-scrollbar-thumb {
+  background: #000000;
+  border-radius: 0px;
+}
+.premium-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #000000 #F5F5F5;
+  -webkit-overflow-scrolling: touch;
+}
