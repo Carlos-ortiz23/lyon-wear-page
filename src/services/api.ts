@@ -5,7 +5,7 @@
 
 import { Product } from '../types';
 
-const BASE_URL = 'https://script.google.com/macros/s/AKfycbxMK5rZllw2cWm1FmQJ7rEZgRzNCfnLBNk0wQ3p8DEwlgM4wxqTel0T-MruPOvOHDL2/exec';
+const BASE_URL = 'https://script.google.com/macros/s/AKfycbzFQP33quxOUC2Tq3TwQ8Qdme5Ipt3t3elvP2sSrrpACs7B0yPBwys70S2E9oaM_08r8Q/exec';
 
 // Cache in memory to make the UI ultra-fast and avoid redundant API hits
 let cachedProducts: Product[] | null = null;
