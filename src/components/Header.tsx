@@ -4,8 +4,10 @@
  */
 
 import React, { useState } from 'react';
-import { Search, X, Menu } from 'lucide-react';
+import { Search, X, Menu, Instagram } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import TikTokIcon from './TikTokIcon';
+import { SOCIAL_LINKS } from '../constants/social';
 
 interface HeaderProps {
   searchQuery: string;
@@ -24,10 +26,10 @@ export default function Header({
 
   return (
     <header className="sticky top-0 z-40 bg-neutral-950/95 backdrop-blur-md border-b border-neutral-800 px-3 py-2.5 md:px-8 md:py-4 text-white">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-2.5 md:gap-4">
-        
-        {/* Top Row on Mobile: Logo and Menu */}
-        <div className="flex items-center justify-between w-full md:w-auto">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-center justify-between gap-2.5 lg:gap-4">
+
+        {/* Top Row on Mobile/Tablet: Logo and Menu */}
+        <div className="flex items-center justify-between w-full lg:w-auto">
           {/* Brand Logo & Wordmark */}
           <div className="flex items-center gap-2 select-none">
             <div className="w-9 h-9 md:w-12 md:h-12 flex items-center justify-center">
@@ -47,8 +49,8 @@ export default function Header({
             </div>
           </div>
 
-          {/* Hamburger Menu button on mobile */}
-          <div className="flex items-center gap-2 md:hidden">
+          {/* Hamburger Menu button — only on mobile and tablet */}
+          <div className="flex items-center gap-2 lg:hidden">
             <button
               id="mobile-hamburger-btn"
               onClick={() => setIsMenuOpen(true)}
@@ -60,8 +62,8 @@ export default function Header({
           </div>
         </div>
 
-        {/* Search Bar - Always visible, full width on Mobile, max-w-md on Desktop */}
-        <div className="w-full md:flex-1 md:max-w-md">
+        {/* Search Bar - Always visible, full width on Mobile/Tablet, max-w-md on Desktop */}
+        <div className="w-full lg:flex-1 lg:max-w-md">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-500" />
             <input
@@ -85,16 +87,48 @@ export default function Header({
           </div>
         </div>
 
-        {/* Desktop Only Navigation Actions */}
-        <div className="hidden md:flex items-center gap-3">
-          <button
-            id="desktop-hamburger-btn"
-            onClick={() => setIsMenuOpen(true)}
-            className="relative p-2.5 text-neutral-300 hover:text-white bg-neutral-900 rounded-none hover:bg-neutral-800 transition-all duration-200 cursor-pointer h-11 w-11 flex items-center justify-center border border-neutral-800"
-            aria-label="Abrir menú de navegación"
+        {/* Desktop Only Navigation: collections inline + social links */}
+        <div className="hidden lg:flex items-center gap-2">
+          <nav className="flex items-center gap-2" aria-label="Colecciones">
+            {(['todos', 'hombre', 'mujer'] as const).map((gender) => {
+              const isSelected = selectedGender === gender;
+              return (
+                <button
+                  key={gender}
+                  id={`desktop-gender-${gender}`}
+                  onClick={() => setSelectedGender(gender)}
+                  className={`px-4 h-11 text-[11px] font-black uppercase tracking-[0.2em] border rounded-none transition-all duration-200 cursor-pointer ${
+                    isSelected
+                      ? 'bg-white border-white text-black'
+                      : 'bg-neutral-900 border-neutral-800 text-neutral-300 hover:bg-neutral-800 hover:text-white'
+                  }`}
+                >
+                  {gender === 'todos' ? 'Todos' : gender === 'hombre' ? 'Hombre' : 'Mujer'}
+                </button>
+              );
+            })}
+          </nav>
+          <div className="w-px h-6 bg-neutral-800 mx-1"></div>
+          <a
+            id="desktop-social-instagram"
+            href={SOCIAL_LINKS.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="h-11 w-11 flex items-center justify-center bg-neutral-900 border border-neutral-800 rounded-none text-neutral-300 hover:bg-white hover:text-black transition-all duration-200"
+            aria-label="Síguenos en Instagram"
           >
-            <Menu className="w-5 h-5" />
-          </button>
+            <Instagram className="w-4 h-4" />
+          </a>
+          <a
+            id="desktop-social-tiktok"
+            href={SOCIAL_LINKS.tiktok}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="h-11 w-11 flex items-center justify-center bg-neutral-900 border border-neutral-800 rounded-none text-neutral-300 hover:bg-white hover:text-black transition-all duration-200"
+            aria-label="Síguenos en TikTok"
+          >
+            <TikTokIcon className="w-4 h-4" />
+          </a>
         </div>
 
       </div>
@@ -173,6 +207,35 @@ export default function Header({
                     );
                   })}
                 </nav>
+
+                {/* Social links inside drawer */}
+                <div className="pt-2">
+                  <div className="text-center text-[11px] font-black text-neutral-500 tracking-[0.3em] uppercase mb-4">
+                    Síguenos
+                  </div>
+                  <div className="flex justify-center gap-4">
+                    <a
+                      id="drawer-social-instagram"
+                      href={SOCIAL_LINKS.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="h-12 w-12 flex items-center justify-center bg-neutral-900 border border-neutral-800 rounded-none text-neutral-300 hover:bg-white hover:text-black transition-all duration-200"
+                      aria-label="Síguenos en Instagram"
+                    >
+                      <Instagram className="w-5 h-5" />
+                    </a>
+                    <a
+                      id="drawer-social-tiktok"
+                      href={SOCIAL_LINKS.tiktok}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="h-12 w-12 flex items-center justify-center bg-neutral-900 border border-neutral-800 rounded-none text-neutral-300 hover:bg-white hover:text-black transition-all duration-200"
+                      aria-label="Síguenos en TikTok"
+                    >
+                      <TikTokIcon className="w-5 h-5" />
+                    </a>
+                  </div>
+                </div>
               </div>
 
               {/* Decorative Brand watermark inside full screen drawer */}

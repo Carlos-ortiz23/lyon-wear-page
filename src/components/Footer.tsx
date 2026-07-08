@@ -4,7 +4,9 @@
  */
 
 import React from 'react';
-import { Truck, ShieldCheck, Headphones, Instagram, Facebook, ArrowUp } from 'lucide-react';
+import { Truck, ShieldCheck, Headphones, Instagram, ArrowUp } from 'lucide-react';
+import TikTokIcon from './TikTokIcon';
+import { SOCIAL_LINKS } from '../constants/social';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -34,11 +36,11 @@ export default function Footer() {
               Lyon Wear es una firma de moda urbana premium enfocada en democratizar diseños exclusivos de alta costura, calzado de alto rendimiento y gorras de colección.
             </p>
             <div className="flex gap-3 pt-2">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="p-2.5 bg-neutral-900 hover:bg-white border border-neutral-800 rounded-none text-neutral-400 hover:text-black transition-all" aria-label="Síguenos en Instagram">
+              <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" className="p-2.5 bg-neutral-900 hover:bg-white border border-neutral-800 rounded-none text-neutral-400 hover:text-black transition-all" aria-label="Síguenos en Instagram">
                 <Instagram className="w-4 h-4" />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="p-2.5 bg-neutral-900 hover:bg-white border border-neutral-800 rounded-none text-neutral-400 hover:text-black transition-all" aria-label="Síguenos en Facebook">
-                <Facebook className="w-4 h-4" />
+              <a href={SOCIAL_LINKS.tiktok} target="_blank" rel="noopener noreferrer" className="p-2.5 bg-neutral-900 hover:bg-white border border-neutral-800 rounded-none text-neutral-400 hover:text-black transition-all" aria-label="Síguenos en TikTok">
+                <TikTokIcon className="w-4 h-4" />
               </a>
             </div>
           </div>
